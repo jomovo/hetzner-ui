@@ -112,7 +112,7 @@ define("nodes/components/driver-hetzner/component", ["exports", "shared/mixins/n
         serverLabel: [''],
         placementGroup: '',
         waitForRunningTimeout: '0',
-        waitOnPolling: '0'
+        waitOnPolling: '1'
       });
       set(this, 'model.hetznerConfig', config);
     },
