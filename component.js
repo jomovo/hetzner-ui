@@ -110,7 +110,9 @@ define("nodes/components/driver-hetzner/component", ["exports", "shared/mixins/n
         firewalls: [],
         usePrivateNetwork: false,
         serverLabel: [''],
-        placementGroup: ''
+        placementGroup: '',
+        waitForRunningTimeout: '0',
+        waitOnPolling: '0'
       });
       set(this, 'model.hetznerConfig', config);
     },
