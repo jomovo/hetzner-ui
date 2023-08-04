@@ -131,10 +131,14 @@ define("nodes/components/driver-hetzner/component", ["exports", "shared/mixins/n
         this.set('model.hetznerConfig.serverLabel', []);
       }
 
-      if (!this.get('model.hetznerConfig.additionalKey')) {
-        this.set('model.hetznerConfig.additionalKey', []);
+      if (!this.get('model.hetznerConfig.waitForRunningTimeout')) {
+        this.set('model.hetznerConfig.waitForRunningTimeout', '0');
       }
 
+      if (!this.get('model.hetznerConfig.waitOnPolling')) {
+        this.set('model.hetznerConfig.waitOnPolling', '1');
+      }
+      
       var errors = get(this, 'errors') || [];
 
       if (!get(this, 'model.name')) {
